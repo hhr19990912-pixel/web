@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hr · 个人网站</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top">hr</a>
+    <nav class="nav">
+      <a href="#about">关于</a>
+      <a href="#calculator">计算器</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="hero-brand">hr</p>
+      <h1 class="hero-title">做产品，也写一点小工具。</h1>
+      <p class="hero-lead">这是一个只用 HTML、CSS 和 JS 搭起来的个人站点。下面有一台可直接使用的计算器。</p>
+      <a class="hero-cta" href="#calculator">打开计算器</a>
+    </section>
+
+    <section id="about" class="about">
+      <h2>关于我</h2>
+      <p>我是 hr，一名产品经理。喜欢把想法快速落地成可点可用的页面——不追求复杂框架，先把事情做清楚。</p>
+    </section>
+
+    <section id="calculator" class="calc-section">
+      <h2>计算器</h2>
+      <p class="calc-intro">加减乘除、小数与键盘输入都已支持。</p>
+
+      <div class="calculator" role="application" aria-label="计算器">
+        <div class="calc-display" aria-live="polite">
+          <span class="calc-expression" id="expression"></span>
+          <span class="calc-result" id="display">0</span>
+        </div>
+
+        <div class="calc-keys">
+          <button type="button" class="key key-fn" data-action="clear">AC</button>
+          <button type="button" class="key key-fn" data-action="sign">±</button>
+          <button type="button" class="key key-fn" data-action="percent">%</button>
+          <button type="button" class="key key-op" data-action="operator" data-value="/">÷</button>
+
+          <button type="button" class="key" data-action="digit" data-value="7">7</button>
+          <button type="button" class="key" data-action="digit" data-value="8">8</button>
+          <button type="button" class="key" data-action="digit" data-value="9">9</button>
+          <button type="button" class="key key-op" data-action="operator" data-value="*">×</button>
+
+          <button type="button" class="key" data-action="digit" data-value="4">4</button>
+          <button type="button" class="key" data-action="digit" data-value="5">5</button>
+          <button type="button" class="key" data-action="digit" data-value="6">6</button>
+          <button type="button" class="key key-op" data-action="operator" data-value="-">−</button>
+
+          <button type="button" class="key" data-action="digit" data-value="1">1</button>
+          <button type="button" class="key" data-action="digit" data-value="2">2</button>
+          <button type="button" class="key" data-action="digit" data-value="3">3</button>
+          <button type="button" class="key key-op" data-action="operator" data-value="+">+</button>
+
+          <button type="button" class="key key-zero" data-action="digit" data-value="0">0</button>
+          <button type="button" class="key" data-action="decimal">.</button>
+          <button type="button" class="key key-eq" data-action="equals">=</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 hr · 纯前端小站</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
